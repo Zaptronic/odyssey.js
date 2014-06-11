@@ -18,7 +18,6 @@ function Splash(context) {
     inner_content.append('p').text('Templates give you different ways to unfold you story')
     var templates = inner_content.append('ul').attr('class', 'template_list h-valign')
 
-
     var template = templates
       .selectAll('.template').data(context.templates())
       .enter()
@@ -41,7 +40,10 @@ function Splash(context) {
         })
         .attr('data-grid', '6x8')
         .attr('data-blocksize', '180x134')
-        .attr('data-frames', '50')
+        .attr('data-frames', function(d) {
+          if (d.title == "slides") return 150
+            else return 50
+        })
         .attr('data-fps', '30')
         .attr('data-autoplay', 'stop')
         .attr('data-autoload', 'true')
