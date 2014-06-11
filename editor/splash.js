@@ -39,8 +39,8 @@ function Splash(context) {
         .attr('data-baseurl', function(d) {
           return d.title
         })
-        .attr('data-grid', '5x5')
-        .attr('data-blocksize', '150x115')
+        .attr('data-grid', '6x8')
+        .attr('data-blocksize', '180x134')
         .attr('data-frames', '50')
         .attr('data-fps', '30')
         .attr('data-autoplay', 'stop')
